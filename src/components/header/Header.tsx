@@ -1,35 +1,40 @@
-// import { image } from "@config/constant/image"
+import { useState } from "react"
+import DarkButton from "./Button/DarkButton"
+import LanguageButton from "./Button/LanguageButton"
+import HeadingLogo from "./HeadingLogo"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 const Header = () => {
+    const [menu, setMenu] = useState(false)
+    const handleMenu = () => {
+        setMenu(!menu)
+    }
     return (
         <>
-            <div className="  flex flex-row justify-between items-center p-2 m-4">
-                {/* sidebar */}
+
+            <div className="w-full flex justify-between items-center my-2 px-4">
                 <div>
-                    <Sidebar />
+                    <Sidebar menu={menu} handleMenu={handleMenu} />
                 </div>
 
-                {/* logo */}
-                <div className="tracking-wider flex justify-center items-center cursor-pointer" title="News Beat Central">
-                    <p className="bg-gray-900 text-white text-center mx-1 w-6 h-6">N</p>
-                    <p className="bg-gray-900 text-white text-center mx-1 w-6 h-6">B</p>
-                    <p className="bg-gray-900 text-white text-center mx-1 w-6 h-6">C</p>
+                <div>
+                    <HeadingLogo />
                 </div>
 
                 {/* toggle buttons dark theme and multilanguage */}
-                <div>
-                    <button>lang</button>
-                    <button>dark</button>
+                <div className="flex flex-col justify-center items-center">
+                    <DarkButton />
+                    <LanguageButton />
                 </div>
-
             </div>
+
             <hr />
             {/* Navbar */}
             <div>
-                <Navbar />
+                <Navbar menu={menu} handleMenu={handleMenu} />
             </div>
-            <hr />
+
+
         </>
     )
 }

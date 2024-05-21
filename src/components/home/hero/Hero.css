@@ -1,0 +1,78 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-areas:
+        "n1 n3 n4"
+        "n2 n3 n5"
+        ".  n3 n6";
+    grid-gap: 1rem;
+
+}
+
+.box-1 {
+    grid-area: n1;
+    /* background-color: rgb(83, 83, 83); */
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box-2 {
+    grid-area: n2;
+    /* background-color: rgb(83, 83, 83); */
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box-3 {
+    grid-area: n3;
+    /* background-color: rgb(83, 83, 83); */
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box-4 {
+    grid-area: n4;
+    /* background-color: rgb(83, 83, 83); */
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box-5 {
+    grid-area: n5;
+    /* background-color: rgb(83, 83, 83); */
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box-6 {
+    grid-area: n6;
+    /* background-color: rgb(83, 83, 83); */
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box-7 {
+    grid-area: n7;
+    /* background-color: rgb(83, 83, 83); */
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
