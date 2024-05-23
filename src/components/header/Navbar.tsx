@@ -17,6 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ menu, handleMenu }) => {
                     <li className='border_bottom py-2 '><Link to='bussiness' onClick={handleMenu}>Bussiness</Link></li>
                     <li className='border_bottom py-2 '><Link to='entertainment' onClick={handleMenu}>Entertainment</Link></li>
                     <li className='border_bottom py-2 '><Link to='technology' onClick={handleMenu}>Technology</Link></li>
+                    <li className='border_bottom py-2 '><Link to='crime' onClick={handleMenu}>Crime</Link></li>
                 </ul>
             </div >
             {/* when toggle background dim */}
@@ -29,6 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ menu, handleMenu }) => {
                     <li className='p-2 '><Link to='bussiness'>Bussiness</Link></li>
                     <li className='p-2 '><Link to='entertainment'>Entertainment</Link></li>
                     <li className='p-2 '><Link to='technology'>Technology</Link></li>
+                    <li className='p-2 '><Link to='crime'>Crime</Link></li>
                 </ul>
                 <hr />
             </div>

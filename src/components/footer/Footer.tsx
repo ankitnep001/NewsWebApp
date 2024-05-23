@@ -4,7 +4,7 @@ const Footer = () => {
 
     return (
         <div className=" absolute  w-full border-2 border-t-black  ">
-            <div className="flex flex-col justify-start items-start mx-32">
+            <div className="flex flex-col justify-start items-start mx-4 md:mx-32">
                 <div className="mt-5">
                     <HeadingLogo />
                 </div>

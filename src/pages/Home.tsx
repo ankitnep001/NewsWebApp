@@ -29,7 +29,7 @@ const Home = () => {
 
     const fetchCategoryNews = async () => {
         try {
-            const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_4169590e0811ce5d97f5fefab6ae1fa424b3d&language=en&category=business,entertainment,sports,technology');
+            const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_4169590e0811ce5d97f5fefab6ae1fa424b3d&language=en&category=business,entertainment,sports,technology,crime');
             setCategoryNews(response.data.results);
         } catch (error) {
             if (axios.isAxiosError(error)) {

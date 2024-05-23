@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <>
 
-            <div className=" w-full flex justify-between items-center  p-4">
+            <div className=" w-full flex justify-between items-center p-1 md:p-4">
                 <div>
                     <Sidebar menu={menu} handleMenu={handleMenu} />
                 </div>

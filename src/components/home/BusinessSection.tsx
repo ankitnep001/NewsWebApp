@@ -16,9 +16,13 @@ const BusinessSection = ({ businessNews }: { businessNews: any[] }) => {
                         <img src={news?.image_url || image?.fallback} alt={news?.title} className="object-cover w-full h-80 group-hover:opacity-90" />
                     </div>
                     <div className="flex justify-center flex-col w-full md:w-[40%] p-2 my-2 leading-6">
-                        <p className="group-hover:underline text-base md:text-xl lg:text-2xl font-bold"><a href={news.link} target="_blank">{news?.title}</a></p>
+                        <p className="group-hover:underline text-base md:text-xl lg:text-2xl font-bold">
+                            <a href={news.link} target="_blank">{news?.title}</a>
+                        </p>
                         <p className="mt-2">{news.description ? news.description.substring(0, 150) + '...' : ''}</p>
-                        <button className="border-2 border-black p-1 w-[30%] mt-4 hover:bg-black hover:text-white"><a href={news.link} target="_blank" rel="noopener noreferrer">See More</a></button>
+                        <button className="border-2 border-black p-1 w-[30%] mt-4 hover:bg-black hover:text-white">
+                            <a href={news.link} target="_blank" rel="noopener noreferrer">See More</a>
+                        </button>
                     </div>
                 </div>
             </div>

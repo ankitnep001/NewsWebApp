@@ -1,4 +1,5 @@
 import Bussiness from "@pages/Bussiness"
+import Crime from "@pages/Crime"
 import Entertainment from "@pages/Entertainment"
 import Home from "@pages/Home"
 import Sport from "@pages/Sport"
@@ -19,6 +20,7 @@ function App() {
           <Route path="bussiness" element={<Bussiness />} />
           <Route path="entertainment" element={<Entertainment />} />
           <Route path="technology" element={<Technology />} />
+          <Route path="crime" element={<Crime />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -11,7 +11,7 @@ const Sport = () => {
         try {
             // console.log('Fetching sport news...');
             const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_4169590e0811ce5d97f5fefab6ae1fa424b3d&language=en&category=sports');
-            console.log('Response:', response.data);
+            // console.log('Response:', response.data);
             setSportNews(response.data.results);
             setIsLoading(false);
         } catch (error) {
@@ -32,7 +32,7 @@ const Sport = () => {
         <div>
             {isLoading ? (
                 <div className="flex justify-center items-center h-screen">
-                    <img src={image?.loader} alt="Loading..." className="loader w-52 h-52" />
+                    <img src={image?.loader} alt="Loading..." className="loader w-20 md:w-52 h-20 md:h-52" />
                 </div>
             ) : (
                 <SportHero sportNews={sportNews} />
