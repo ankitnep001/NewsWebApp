@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-interface EntertainmentProps {
-    entertainmentNews: any[];
+interface TechProp {
+    techNews: any[];
 }
 
 // for ramdom 6 news 
@@ -10,20 +10,20 @@ const getRandomNews = (news: any[], count: number) => {
     return random.slice(0, count);
 };
 
-const EntertainmentHero: React.FC<EntertainmentProps> = ({ entertainmentNews }) => {
-    const [randomEntertainmentNews, setRandomEntertainmentNews] = useState<any[]>([]);
+
+const TechHero: React.FC<TechProp> = ({ techNews }) => {
+    const [randomTechNews, setRandomTechNews] = useState<any[]>([]);
 
     useEffect(() => {
-        if (entertainmentNews) {
-            setRandomEntertainmentNews(getRandomNews(entertainmentNews, 6));
+        if (techNews) {
+            setRandomTechNews(getRandomNews(techNews, 6));
         }
-    }, [entertainmentNews]);
-
+    }, [techNews]);
     return (
         <div className="container mx-auto py-8">
-            <h1 className="text-4xl font-bold mb-6">Entertainment News</h1>
+            <h1 className="text-4xl font-bold mb-6">Tech News</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
-                {randomEntertainmentNews.map((article, index) => (
+                {randomTechNews.map((article, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
                         <img src={article.image_url} alt={article.title} className="w-full h-48 object-cover" />
                         <div className="p-4">
@@ -48,4 +48,4 @@ const EntertainmentHero: React.FC<EntertainmentProps> = ({ entertainmentNews }) 
     )
 }
 
-export default EntertainmentHero
+export default TechHero

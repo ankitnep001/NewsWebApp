@@ -34,6 +34,12 @@
       ],
       "@pages/*": [
         "pages/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@types/*": [
+        "types/*"
       ]
     }
   },
