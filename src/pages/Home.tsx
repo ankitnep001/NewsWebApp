@@ -10,11 +10,13 @@ import { NewsProps } from '../types/global.types';
 const Home = () => {
     const [news, setNews] = useState<NewsProps[]>([]);
     const [categoryNews, setCategoryNews] = useState<NewsProps[]>([]);
+    const [_isLoading, setIsLoading] = useState<boolean>(true);
 
     const fetchNews = async () => {
         try {
             const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_442651a841b02fb6a3d977cbe6e7c87b5754f&language=en');
             setNews(response.data.results);
+            setIsLoading(false);
         } catch (error) {
             if (axios.isAxiosError(error)) {
                 console.error('Error message:', error.message);
@@ -44,6 +46,8 @@ const Home = () => {
         fetchCategoryNews();
     }, []);
 
+
+
     // Filter category news
     const sportNews = categoryNews.filter(article => article.category.includes('sports'));
     const businessNews = categoryNews.filter(article => article.category.includes('business'));
@@ -51,8 +55,8 @@ const Home = () => {
     const technologyNews = categoryNews.filter(article => article.category.includes('technology'));
 
     return (
-        <div className=" mx-32">
-            <div className="my-10">
+        <div className="mx-2 md:mx-32">
+            <div className="my-5 md:my-10">
                 <Hero news={news} />
             </div>
 

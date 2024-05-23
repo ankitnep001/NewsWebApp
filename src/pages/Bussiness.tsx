@@ -33,7 +33,7 @@ const Bussiness = () => {
         <div className=''>
             {isLoading ? (
                 <div className="flex justify-center items-center h-screen">
-                    <img src={image?.loader} alt="Loading..." className=" w-52 h-52" />
+                    <img src={image?.loader} alt="Loading..." className="loader w-52 h-52" />
                 </div>
             ) : (
                 <BusinessHero businessNews={businessNews} />

@@ -34,7 +34,7 @@ const Technology = () => {
         <div>
             {isLoading ? (
                 <div className="flex justify-center items-center h-screen">
-                    <img src={image?.loader} alt="Loading..." className="w-52 h-52 filter invert" />
+                    <img src={image?.loader} alt="Loading..." className="loader w-52 h-52 " />
                 </div>
             ) : (
                 <TechHero techNews={techNews} />
