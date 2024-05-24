@@ -11,7 +11,6 @@ const Sidebar: React.FC<SidebarProps> = ({ menu, handleMenu }) => {
         <div onClick={handleMenu} className='block m-1 cursor-pointer'>
             {menu ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
-
     </>
     )
 }

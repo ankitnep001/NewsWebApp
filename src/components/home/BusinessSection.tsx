@@ -13,7 +13,7 @@ const BusinessSection = ({ businessNews }: { businessNews: any[] }) => {
                 <h1 className="font-bold text-2xl mb-4"><Link to='business'>Business</Link></h1>
                 <div className="flex flex-col md:flex-row justify-between items-center py-2">
                     <div className="flex justify-center items-center w-full md:w-[60%] mb-4 md:mb-0">
-                        <img src={news?.image_url || image?.fallback} alt={news?.title} className="object-cover w-full h-80 group-hover:opacity-90" />
+                        <img src={news?.image_url || image?.fallback} alt={news?.title} className="object-contain w-full h-96 group-hover:opacity-90" />
                     </div>
                     <div className="flex justify-center flex-col w-full md:w-[40%] p-2 my-2 leading-6">
                         <p className="group-hover:underline text-base md:text-xl lg:text-2xl font-bold">

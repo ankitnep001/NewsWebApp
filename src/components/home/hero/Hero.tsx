@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({ news }) => {
                 {[1, 2].map((index) => (
                     <div key={index} className="group">
                         <div className="relative">
-                            <img src={news[index]?.image_url || image?.fallback} alt="img" className="object-cover w-full h-48 md:h-64 lg:h-80 group-hover:opacity-90" />
+                            <img src={news[index]?.image_url || image?.fallback} alt="img" className="object-cover w-full h-48 md:h-fit  group-hover:opacity-90" />
                         </div>
                         <div className="p-4">
                             <h2 className="text-sm md:text-lg lg:text-xl font-bold group-hover:underline ">
@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ news }) => {
             {/* Main Feature Article */}
             <div className="group col-span-1 md:col-span-2 lg:col-span-2 relative">
                 <div className="relative group ">
-                    <img src={news[0]?.image_url || image?.fallback} alt="img" className="object-cover w-full h-64 md:h-96 lg:h-[30rem] group-hover:opacity-90" />
+                    <img src={news[0]?.image_url || image?.fallback} alt="img" className="object-cover w-full h-64 md:h-fit group-hover:opacity-90" />
                 </div>
                 <div className="p-4">
                     <h2 className="text-sm md:text-lg lg:text-xl font-bold group-hover:underline">

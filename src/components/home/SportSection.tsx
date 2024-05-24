@@ -19,7 +19,7 @@ const SportSection = ({ sportNews }: { sportNews: any[] }) => {
                         <button className="border-2 border-black p-1 w-[30%] mt-1 hover:bg-black hover:text-white"><a href={news.link} target="_blank">See More</a></button>
                     </div>
                     <div className="flex justify-center items-center w-full md:w-[60%] mb-4 md:mb-0">
-                        <img src={news?.image_url || image?.fallback} alt={news?.title} className=" object-cover w-full h-80 group-hover:opacity-90" />
+                        <img src={news?.image_url || image?.fallback} alt={news?.title} className=" object-contain w-full h-96 group-hover:opacity-90" />
                     </div>
                 </div>
             </div>
