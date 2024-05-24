@@ -10,7 +10,7 @@ const Crime = () => {
     const fetchCrimeNews = async () => {
         try {
             // console.log('Fetching entertainment news...');
-            const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_442651a841b02fb6a3d977cbe6e7c87b5754f&language=en&category=crime  ');
+            const response = await axios.get(`${import.meta.env.VITE_NEWS_API_URL}${import.meta.env.VITE_NEWS_API_KEY}&language=en&category=crime`);
             // console.log('Response:', response.data);
             setCrimeNews(response.data.results);
             setIsLoading(false);

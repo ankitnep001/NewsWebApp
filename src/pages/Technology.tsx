@@ -11,7 +11,7 @@ const Technology = () => {
     const fetchTechNews = async () => {
         try {
             // console.log('Fetching business news...');
-            const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_4169590e0811ce5d97f5fefab6ae1fa424b3d&language=en&category=technology');
+            const response = await axios.get(`${import.meta.env.VITE_NEWS_API_URL}${import.meta.env.VITE_NEWS_API_KEY}&language=en&category=technology`);
             // console.log('Response:', response.data);
             setTechNews(response.data.results);
             setIsLoading(false);

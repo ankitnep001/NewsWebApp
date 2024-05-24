@@ -10,7 +10,7 @@ const Sport = () => {
     const fetchSportNews = async () => {
         try {
             // console.log('Fetching sport news...');
-            const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_4169590e0811ce5d97f5fefab6ae1fa424b3d&language=en&category=sports');
+            const response = await axios.get(`${import.meta.env.VITE_NEWS_API_URL}${import.meta.env.VITE_NEWS_API_KEY}&language=en&category=sports`);
             // console.log('Response:', response.data);
             setSportNews(response.data.results);
             setIsLoading(false);

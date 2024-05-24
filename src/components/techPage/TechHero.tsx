@@ -24,10 +24,10 @@ const TechHero: React.FC<TechProp> = ({ techNews }) => {
             <h1 className="text-4xl font-bold mb-6">Tech News</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
                 {randomTechNews.map((article, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src={article.image_url} alt={article.title} className="w-full h-48 object-cover" />
+                    <div key={index} className="group bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src={article.image_url} alt={article.title} className="group-hover:opacity-90 w-full h-48 object-cover" />
                         <div className="p-4">
-                            <h2 className="text-xl font-semibold md:text-red mb-2">{article.title}</h2>
+                            <h2 className=" group-hover:underline text-xl font-semibold md:text-red mb-2">{article.title}</h2>
                             <p className="text-gray-700 flex-grow">
                                 {article.description ? article.description.substring(0, 30) + '...' : ''}
                             </p>

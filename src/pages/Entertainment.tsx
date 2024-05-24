@@ -10,7 +10,7 @@ const Entertainment = () => {
     const fetchEntertainmentNews = async () => {
         try {
             // console.log('Fetching entertainment news...');
-            const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_4169590e0811ce5d97f5fefab6ae1fa424b3d&language=en&category=entertainment  ');
+            const response = await axios.get(`${import.meta.env.VITE_NEWS_API_URL}${import.meta.env.VITE_NEWS_API_KEY}&language=en&category=entertainment`);
             // console.log('Response:', response.data);
             setEntertainmentNews(response.data.results);
             setIsLoading(false);

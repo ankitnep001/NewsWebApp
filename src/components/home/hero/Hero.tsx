@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ news }) => {
 
             {/* Main Feature Article */}
             <div className="group col-span-1 md:col-span-2 lg:col-span-2 relative">
-                <div className="relative group md:content-center">
+                <div className="relative group ">
                     <img src={news[0]?.image_url || image?.fallback} alt="img" className="object-cover w-full h-64 md:h-96 lg:h-[30rem] group-hover:opacity-90" />
                 </div>
                 <div className="p-4">
