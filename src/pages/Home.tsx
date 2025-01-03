@@ -10,6 +10,7 @@ import { NewsProps } from '../types/global.types';
 const Home = () => {
     const [news, setNews] = useState<NewsProps[]>([]);
     const [categoryNews, setCategoryNews] = useState<NewsProps[]>([]);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_isLoading, setIsLoading] = useState<boolean>(true);
 
     const fetchNews = async () => {

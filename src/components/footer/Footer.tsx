@@ -1,6 +1,7 @@
-import HeadingLogo from "components/header/HeadingLogo"
+import HeadingLogo from "components/header/HeadingLogo";
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear(); // Get the current year dynamically
 
     return (
         <div className=" absolute  w-full border-2 border-t-black  ">
@@ -19,7 +20,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mb-4 text-gray-500">
-                    <p>Copyright 2024 NBC. All rights reserved. </p>
+                    <p>Copyright © {currentYear} NBC. All rights reserved. </p>
                 </div>
             </div>
         </div>
